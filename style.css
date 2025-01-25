@@ -1,0 +1,198 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Roboto Mono", serif;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 20px;
+}
+
+body {
+    background-color: #c15c5c;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pomodoro-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.start-button {
+    all: unset;
+    padding: 5px 14px;
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    border: white solid 3px;
+    cursor: pointer;
+}
+
+.start-button:hover {
+    background-color: transparent;
+    color: white;
+}
+
+.mode button {
+    all: unset;
+    padding: 5px 14px;
+    background-color: transparent;
+    color: white;
+    border-radius: 10px;
+    border: white solid 3px;
+    cursor: pointer;
+}
+.mode button:hover {
+    color: black;
+}
+.mode .active {
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.reset-button {
+    all: unset;
+    height: 30px;
+}
+.reset-button img{
+    height: 100%;
+    filter: invert();
+    cursor: pointer;
+}
+.reset-button img:hover{
+    width: 30px;
+    filter: none;
+}
+
+.pomodoro-timer {
+    font-size: 100px;
+    margin: 10px 0;
+}
+
+.skip-button {
+    all: unset;
+    height: 35px;
+}
+.skip-button img {
+    height: 100%;
+    filter: invert();
+    cursor: pointer;
+}
+.skip-button img:hover {
+    filter: none;
+}
+
+/* skip button */
+.setting-list {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    color: white;
+    align-items: center;
+    background-color: #414141ed;
+    padding: 18px;
+    border-radius: 15px;
+    padding: 10px 18px;
+}
+
+.setting-title {
+    width: max-content;
+}
+
+.div-label-Delete {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+}
+
+.switch[checked="true"] .slider {
+    background-color: #2196F3;
+}
+
+.switch[checked="true"] .slider:before {
+    transform: translateX(26px);
+}
+
+.switch[checked="false"] .slider {
+    background-color: #ccc;
+}
+
+.switch[checked="false"] .slider:before {
+    transform: translateX(0);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.setting-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 18px;
+}
+
+.input-lb {
+    border-radius: 6px;
+    background-color: rgb(239, 239, 239);
+    font-size: 16px;
+    padding: 4px 7px;
+    box-shadow: none;
+    border: none;
+    box-sizing: border-box;
+    width: 50px;
+}

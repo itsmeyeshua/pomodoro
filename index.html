@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="style.css">
+		<!-- font -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+		<!-- font -->
+		<link rel="icon" href="assets/tomato-svgrepo.svg">
+		<title>Pomodoro</title>
+	</head>
+	<body>
+		<div class="container">
+			<section class="setting-container">
+				<div class="setting-list">
+					<h1 class="setting-title">auto start</h1>
+					<div class="div-label-Delete">
+						<label class="switch" checked="false">
+							<input type="checkbox">
+							<span class="slider round"></span>
+						</label>
+					</div>
+				</div>
+				<div class="setting-list">
+					<div>
+						<span class="">Long Break interval</span>
+					</div>
+					<input type="number" min="1" step="1" width="70" class="input-lb" value="4">
+				</div>
+			</section>
+			<section class="pomodoro-container">
+				<div class="mode">
+					<button class="pomodoro-button active" data-duration="25:00">pomodoro</button>
+					<button class="short-break-button" data-duration="05:00">short break</button>
+					<button class="long-break-button" data-duration="15:00">long break</button>
+				</div>
+				<h1 class="pomodoro-timer" data-time="25:00">25:00</h1>
+				<div class="buttons-container">
+					<button class="reset-button">
+						<img src="./assets/reset.svg" alt="reset button">
+					</button>
+					<button class="start-button"  title="ctrl + space">Start</button>
+				</div>
+			</section>
+		</div>
+
+
+		<script src="script.js"></script>
+	</body>
+</html>
