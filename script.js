@@ -289,6 +289,11 @@ function showNotification(title) {
             icon: "./assets/tomato-svgrepo.svg",
 			tag: "dup",
         });
+
+		notification.onclick = function () {
+            window.focus();
+            this.close();
+        };
     } else {
         console.log("Permission not granted.");
     }
